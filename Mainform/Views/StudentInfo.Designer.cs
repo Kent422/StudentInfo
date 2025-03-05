@@ -44,6 +44,11 @@
             this.UpdateBtn = new DevExpress.XtraEditors.SimpleButton();
             this.DeleteBtn = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.teFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMiddleName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teLastName.Properties)).BeginInit();
@@ -55,42 +60,42 @@
             // 
             // teFirstName
             // 
-            this.teFirstName.Location = new System.Drawing.Point(61, 33);
+            this.teFirstName.Location = new System.Drawing.Point(30, 25);
             this.teFirstName.Name = "teFirstName";
             this.teFirstName.Properties.AutoHeight = false;
-            this.teFirstName.Size = new System.Drawing.Size(137, 26);
+            this.teFirstName.Size = new System.Drawing.Size(168, 26);
             this.teFirstName.TabIndex = 0;
             // 
             // teMiddleName
             // 
-            this.teMiddleName.Location = new System.Drawing.Point(61, 82);
+            this.teMiddleName.Location = new System.Drawing.Point(30, 82);
             this.teMiddleName.Name = "teMiddleName";
             this.teMiddleName.Properties.AutoHeight = false;
-            this.teMiddleName.Size = new System.Drawing.Size(137, 26);
+            this.teMiddleName.Size = new System.Drawing.Size(168, 26);
             this.teMiddleName.TabIndex = 1;
             // 
             // teLastName
             // 
-            this.teLastName.Location = new System.Drawing.Point(61, 132);
+            this.teLastName.Location = new System.Drawing.Point(30, 139);
             this.teLastName.Name = "teLastName";
             this.teLastName.Properties.AutoHeight = false;
-            this.teLastName.Size = new System.Drawing.Size(137, 26);
+            this.teLastName.Size = new System.Drawing.Size(168, 26);
             this.teLastName.TabIndex = 2;
             // 
             // teContactNumber
             // 
-            this.teContactNumber.Location = new System.Drawing.Point(61, 182);
+            this.teContactNumber.Location = new System.Drawing.Point(30, 197);
             this.teContactNumber.Name = "teContactNumber";
             this.teContactNumber.Properties.AutoHeight = false;
-            this.teContactNumber.Size = new System.Drawing.Size(137, 26);
+            this.teContactNumber.Size = new System.Drawing.Size(168, 26);
             this.teContactNumber.TabIndex = 3;
             // 
             // teAddress
             // 
-            this.teAddress.Location = new System.Drawing.Point(61, 233);
+            this.teAddress.Location = new System.Drawing.Point(30, 257);
             this.teAddress.Name = "teAddress";
             this.teAddress.Properties.AutoHeight = false;
-            this.teAddress.Size = new System.Drawing.Size(137, 26);
+            this.teAddress.Size = new System.Drawing.Size(168, 26);
             this.teAddress.TabIndex = 4;
             // 
             // gcStudent
@@ -189,11 +194,56 @@
             this.labelControl1.TabIndex = 9;
             this.labelControl1.Text = "labelControl1";
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(30, 6);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(48, 13);
+            this.labelControl2.TabIndex = 10;
+            this.labelControl2.Text = "FirstName";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(30, 65);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(60, 13);
+            this.labelControl3.TabIndex = 11;
+            this.labelControl3.Text = "Middle Name";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(30, 121);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(50, 13);
+            this.labelControl4.TabIndex = 12;
+            this.labelControl4.Text = "Last Name";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(30, 178);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(78, 13);
+            this.labelControl5.TabIndex = 13;
+            this.labelControl5.Text = "Contact Number";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(30, 238);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(39, 13);
+            this.labelControl6.TabIndex = 14;
+            this.labelControl6.Text = "Address";
+            // 
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 387);
+            this.Controls.Add(this.labelControl6);
+            this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);
@@ -236,5 +286,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn ContactNumber;
         private DevExpress.XtraGrid.Columns.GridColumn Address;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

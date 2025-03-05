@@ -19,6 +19,7 @@ namespace Mainform.Views
             InitializeComponent();
         }
 
+        //this the Object
         public List<Student> students = new List<Student>();
        
 
@@ -31,14 +32,19 @@ namespace Mainform.Views
             student.LastName = teLastName.Text;
             student.ContactNumber = teContactNumber.Text;
             student.Address = teAddress.Text;
-
+ 
             students.Add(student);
+
+            //Where the data stored after adding data
             gcStudent.DataSource = students;
+
+            //Refresh the Grid Control after cliking the add button
             gcStudent.RefreshDataSource();
             ResetField();
 
         }
 
+        //This method is used to Reste the textbox after clicking the add button
        private void ResetField()
         {
             teFirstName.Text = string.Empty;
