@@ -43,7 +43,6 @@
             this.AddBtn = new DevExpress.XtraEditors.SimpleButton();
             this.UpdateBtn = new DevExpress.XtraEditors.SimpleButton();
             this.DeleteBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -186,14 +185,6 @@
             this.DeleteBtn.Text = "DELETE";
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(316, 9);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 13);
-            this.labelControl1.TabIndex = 9;
-            this.labelControl1.Text = "labelControl1";
-            // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(30, 6);
@@ -244,7 +235,6 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.AddBtn);
@@ -285,7 +275,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn LastName;
         private DevExpress.XtraGrid.Columns.GridColumn ContactNumber;
         private DevExpress.XtraGrid.Columns.GridColumn Address;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;

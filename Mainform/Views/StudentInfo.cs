@@ -56,22 +56,37 @@ namespace Mainform.Views
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            Student student = new Student();
-            student.FirstName = teFirstName.Text;
-            student.MiddleName = teMiddleName.Text;
-            student.LastName = teLastName.Text;
-            student.ContactNumber = teContactNumber.Text;
-            student.Address = teAddress.Text;
+            if (gvStudent.FocusedRowHandle >= 0)
+            {
+                Student student = new Student();
+                student.FirstName = teFirstName.Text;
+                student.MiddleName = teMiddleName.Text;
+                student.LastName = teLastName.Text;
+                student.ContactNumber = teContactNumber.Text;
+                student.Address = teAddress.Text;
 
-            gcStudent.DataSource = students;
-            students[gvStudent.FocusedRowHandle] = student;
-            gcStudent.RefreshDataSource();
+                students[gvStudent.FocusedRowHandle] = student; // Update the selected student
+                gcStudent.RefreshDataSource(); // Refresh the grid to apply changes
+            }
+            else
+            {
+                MessageBox.Show("Please select a student to update.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            ResetField();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            
-            
+            if (gvStudent.FocusedRowHandle >= 0)
+            {
+                students.RemoveAt(gvStudent.FocusedRowHandle);
+                gcStudent.RefreshDataSource();
+            }
+            else
+            {
+                MessageBox.Show("Please select a student to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            ResetField();
         }
     }
 }
