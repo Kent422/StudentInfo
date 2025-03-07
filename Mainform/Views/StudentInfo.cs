@@ -27,9 +27,9 @@ namespace Mainform.Views
         private void AddBtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(teFirstName.Text) ||
-        string.IsNullOrWhiteSpace(teLastName.Text) ||
-        string.IsNullOrWhiteSpace(teContactNumber.Text) ||
-        string.IsNullOrWhiteSpace(teAddress.Text))
+                string.IsNullOrWhiteSpace(teLastName.Text) ||
+                string.IsNullOrWhiteSpace(teContactNumber.Text) ||
+                string.IsNullOrWhiteSpace(teAddress.Text))
             {
                 MessageBox.Show("Please fill out all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
