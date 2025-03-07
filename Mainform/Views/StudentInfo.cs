@@ -26,19 +26,28 @@ namespace Mainform.Views
      
         private void AddBtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(teFirstName.Text) ||
+        string.IsNullOrWhiteSpace(teLastName.Text) ||
+        string.IsNullOrWhiteSpace(teContactNumber.Text) ||
+        string.IsNullOrWhiteSpace(teAddress.Text))
+            {
+                MessageBox.Show("Please fill out all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Student student = new Student();
             student.FirstName = teFirstName.Text;
             student.MiddleName = teMiddleName.Text;
             student.LastName = teLastName.Text;
             student.ContactNumber = teContactNumber.Text;
             student.Address = teAddress.Text;
- 
+
             students.Add(student);
 
             //Where the data stored after adding data
             gcStudent.DataSource = students;
 
-            //Refresh the Grid Control after cliking the add button
+            //Refresh the Grid Control after clicking the add button
             gcStudent.RefreshDataSource();
             ResetField();
 
@@ -58,15 +67,19 @@ namespace Mainform.Views
         {
             if (gvStudent.FocusedRowHandle >= 0)
             {
-                Student student = new Student();
-                student.FirstName = teFirstName.Text;
-                student.MiddleName = teMiddleName.Text;
-                student.LastName = teLastName.Text;
-                student.ContactNumber = teContactNumber.Text;
-                student.Address = teAddress.Text;
+                DialogResult result = MessageBox.Show("Are you sure you want to update this student?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Student student = new Student();
+                    student.FirstName = teFirstName.Text;
+                    student.MiddleName = teMiddleName.Text;
+                    student.LastName = teLastName.Text;
+                    student.ContactNumber = teContactNumber.Text;
+                    student.Address = teAddress.Text;
 
-                students[gvStudent.FocusedRowHandle] = student; // Update the selected student
-                gcStudent.RefreshDataSource(); // Refresh the grid to apply changes
+                    students[gvStudent.FocusedRowHandle] = student; // Update the selected student
+                    gcStudent.RefreshDataSource(); // Refresh the grid to apply changes
+                }
             }
             else
             {
@@ -79,13 +92,18 @@ namespace Mainform.Views
         {
             if (gvStudent.FocusedRowHandle >= 0)
             {
-                students.RemoveAt(gvStudent.FocusedRowHandle);
-                gcStudent.RefreshDataSource();
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this student?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    students.RemoveAt(gvStudent.FocusedRowHandle);
+                    gcStudent.RefreshDataSource();
+                }
             }
             else
             {
                 MessageBox.Show("Please select a student to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             ResetField();
         }
     }
